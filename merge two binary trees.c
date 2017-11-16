@@ -31,8 +31,7 @@ struct TreeNode* mergeNodes(struct TreeNode* node1, struct TreeNode* node2)
 
 
 struct TreeNode* mergeTrees(struct TreeNode* t1, struct TreeNode* t2) {
-    struct TreeNode* t;
-    t=t1;
+
     if(t1==NULL)
         return t2;
     if(t2==NULL)

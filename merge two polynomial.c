@@ -1,14 +1,14 @@
 #include<stdio.h> //输入项很多时有点小问题
 
 
-int plus(struct polynomial* pol1, struct polynomial* poly2);
+
 
 struct polynomial{
     int coef;
     int expon;
     struct polynomial* next;
 };
-
+void plus(struct polynomial* pol1, struct polynomial* pol2);
 int main(void)
 {
     int c,e,N,N1,N2;
@@ -54,9 +54,9 @@ int main(void)
         else
             P2=P2->next;
     }
-    N=plus(P1,P2);
-    N1=N1+N2-N;
-    printf("%d  ", N1);
+    plus(P1,P2);
+    //N1=N1+N2-N;
+    //printf("%d  ", N1);
     while(P1->next)
     {
         printf("%d %d  ", P1->next->coef,P1->next->expon);
@@ -68,7 +68,7 @@ int main(void)
 }
 
 
-int plus(struct polynomial* pol1, struct polynomial* pol2)
+void plus(struct polynomial* pol1, struct polynomial* pol2)
 {
         //if(!(pol1 && pol2 && pol1->next && pol2->next))
             //return null;
@@ -112,7 +112,7 @@ int plus(struct polynomial* pol1, struct polynomial* pol2)
             temp1->next=temp2->next;
         }
 
-        return count;
+        //return count;
 }
 
 

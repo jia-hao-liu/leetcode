@@ -10,11 +10,22 @@ struct TreeNode {
       struct TreeNode *right;
   };
 
-
-
-
-
 int main(void)
+{
+
+}
+
+sturct TreeNode* a(int* nums,int numsSize)
+{
+    struct TreeNode* root;
+    root=malloc(sizeof(struct TreeNode));
+    root->val=findmax(nums,numsSize);
+
+}
+
+
+
+/*int main(void)
 {
     int arr[]={3,2,1,6,0,5,8,7,1};
     int N=9;
@@ -81,21 +92,20 @@ struct TreeNode* a(int* nums, int numsSize) {
 
 
 }
-
+*/
 int findmax(int arr[], int N)//找最大的数的算法
 {
 
-    int i,temp=arr[0];
+    int i,index=0,temp=arr[0];
     for(i=1;i<N;i++)
     {
         if(arr[i]>temp)
+        {
             temp=arr[i];
+            index=i;
+        }
     }
-    for(i=0;i<N;i++)
-    {
-        if(temp==arr[i])
-            return i;
-    }
-    return 0;
+
+    return index;
 
 }
