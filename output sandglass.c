@@ -5,9 +5,10 @@ int main(void)
   char ch;
   puts("Please scanf your character and your character numbers.");
   scanf("%d",&N);
-  //scanf("%s", &ch);
+  getchar();
+  scanf("%c", &ch);
   //printf("%d", N);
-  challeng(N,'*');
+  challeng(N,ch);
   return 0;
 }
 
